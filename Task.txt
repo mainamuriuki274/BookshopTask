@@ -1,0 +1,10 @@
+Task 1: Create Public API
+1. Create an endpoint lapi/v1/books which would return the books list (only confirmed
+books), with pagination done by Laravel standards
+2. Every book should return those fields: id, title, cover full URL, price, authors as string
+comma-separated, genres as string comma-separated
+3. You need to use Laravel API Resources for this
+4. Create an endpoint for a single book lapi/v1/books/{id} and show the fields the
+same as in the list but also add Description field. But you need to use the same
+Laravel API Resource, just with the condition of when to add the description field or
+not.
