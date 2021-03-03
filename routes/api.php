@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('books',\App\Http\Controllers\Api\v1\BooksController::class)->only('index','show');
+
