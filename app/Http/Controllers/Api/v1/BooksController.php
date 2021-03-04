@@ -10,11 +10,11 @@ use Illuminate\Http\Request;
 class BooksController extends Controller
 {
     public function index(){
-        $books = Book::with(['genres','authors'])->get();
-        return new BookResource($books);
+        $books = Book::with(['genres','authors'])->where('approved',true)->paginate()->get();
+        return BookResource::collection($books);
     }
     public function show($id){
-        $book = Book::with(['genres','authors'])->findOrFail($id);
+        $book = Book::with(['genres','authors'])->where('approved',true)->findOrFail($id);
         return new BookResource($book);
     }
 }

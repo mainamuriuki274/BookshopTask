@@ -19,7 +19,7 @@ class CreateBooksTable extends Migration
             $table->string('cover_url');
             $table->float('price');
             $table->text('description');
-            $table->string('approved')->default('false');
+            $table->boolean('approved')->default(false);
             $table->timestamps();
 
         });
